@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "AppProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message App {
+    string appId = 1;
+    string acctId = 2;
+    string appSecret = 3;
+    string appNm = 4;
+    string appTp = 5;
+    string appLogoSrc = 6;
+    string appBrf = 7;
+    string appSt = 8;
+    string appStDesc = 9;
+    int32 reviTims = 10;
+    string isDel = 11;
+    int64 lclCrtTms = 12;
+}

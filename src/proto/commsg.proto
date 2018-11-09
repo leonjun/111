@@ -1,0 +1,28 @@
+syntax = "proto3";
+/*暂未使用*/
+
+option java_multiple_files = false;
+option java_outer_classname = "CommProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto;
+import "google/protobuf/any.proto";
+
+message ProtoResponse {
+    ResponseHeader responseHeader = 1;
+    ResponseBody responseBody = 2;
+}
+
+message ResponseHeader {
+    /*全局跟踪号*/
+    string SYS_TRACE_ID = 1;
+    /*返回的结果码*/
+    string SYS_TX_STATUS = 2;
+    /*返回的结果描述*/
+    string SYS_RESP_DESC = 3;
+}
+
+message ResponseBody {
+    /*数据*/
+    google.protobuf.Any ENTITY = 1;
+}
